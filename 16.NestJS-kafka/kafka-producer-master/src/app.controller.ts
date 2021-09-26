@@ -14,7 +14,7 @@ export class AppController {
         brokers: ['localhost:9092'],
       },
       consumer: {
-        groupId: 'kafka' // 必须要nest consumer的Id一致
+        groupId: 'kafka111' // 必须要nest consumer的Id一致
       }
     }
   })
@@ -30,6 +30,9 @@ export class AppController {
   getHello() {
       // test--->topic主题  Hello World传过去的信息
       // 打开网页 localhost:3000 可以在consumer控制台看到效果
-    return this.client.send('test', 'Hello World'); 
+    this.client.emit('test', 'Hello World123'); 
+
+    return '123'
+    
   }
 }
