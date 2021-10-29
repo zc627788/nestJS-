@@ -1,10 +1,10 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
-import { Client, ClientKafka, Transport } from "@nestjs/microservices";
+import { Client, ClientKafka, Transport } from '@nestjs/microservices';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) { }
+  constructor(private readonly appService: AppService) {}
 
   @Client({
     transport: Transport.KAFKA,
@@ -14,25 +14,25 @@ export class AppController {
         brokers: ['localhost:9092'],
       },
       consumer: {
-        groupId: 'kafka111' // 必须要nest consumer的Id一致
-      }
-    }
+        groupId: 'kafka', // 必须要nest consumer的Id一致
+      },
+    },
   })
   client: ClientKafka;
 
   async onModuleInit() {
     //监听和连接topic
+    // test--->topic主题
     this.client.subscribeToResponseOf('test');
     await this.client.connect();
   }
 
   @Get()
   getHello() {
-      // test--->topic主题  Hello World传过去的信息
-      // 打开网页 localhost:3000 可以在consumer控制台看到效果
-    this.client.emit('test', 'Hello World123'); 
+    // test--->topic主题  Hello World传过去的信息
+    // 打开网页 localhost:3000 可以在consumer控制台看到效果
+    this.client.emit('test', 'Hello kafka');
 
-    return '123'
-    
+    return '信息传递';
   }
 }
