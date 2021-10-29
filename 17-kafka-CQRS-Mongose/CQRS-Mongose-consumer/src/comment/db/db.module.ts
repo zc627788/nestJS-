@@ -6,13 +6,12 @@ import { MongooseModule } from '@nestjs/mongoose';
 const MONGO_MODULE = MongooseModule.forFeature([
   { name: 'COMMENT_MODULE', schema: CommentSchema, collection: 'consumer' },
 ]);
-
+const url = process.env.MONGO_URL || 'localhost';
 @Global()
-
 @Module({
   // 连接mongo
   imports: [
-    MongooseModule.forRoot('mongodb://admin:123456@localhost:27017/admin'),
+    MongooseModule.forRoot(`mongodb://root:pass12345@${url}:27017/admin`),
     MONGO_MODULE,
   ],
   exports: [MONGO_MODULE],

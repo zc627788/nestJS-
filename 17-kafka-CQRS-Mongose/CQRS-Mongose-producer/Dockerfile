@@ -1,6 +1,6 @@
 FROM node:12.19.0-alpine3.9 AS development
 
-WORKDIR /usr/src/app2
+WORKDIR /usr/src/app1
 
 COPY package*.json ./
 
@@ -16,6 +16,6 @@ COPY . .
 RUN npm run build
 
 
-COPY --from=development /usr/src/app2/dist ./dist
+COPY --from=development /usr/src/app1/dist ./dist
 
 CMD ["node", "dist/main"]
