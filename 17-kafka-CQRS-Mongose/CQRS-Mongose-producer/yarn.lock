@@ -650,6 +650,15 @@
   resolved "https://registry.nlark.com/@nestjs/mapped-types/download/@nestjs/mapped-types-1.0.0.tgz#52a0441795f6da8144a35970d3ebc19281f31cfd"
   integrity sha1-UqBEF5X22oFEo1lw0+vBkoHzHP0=
 
+"@nestjs/microservices@^8.0.7":
+  version "8.1.1"
+  resolved "https://registry.npmmirror.com/@nestjs/microservices/download/@nestjs/microservices-8.1.1.tgz?cache=0&sync_timestamp=1634199116780&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40nestjs%2Fmicroservices%2Fdownload%2F%40nestjs%2Fmicroservices-8.1.1.tgz#d274f872b626da87d6c0eec40094aa5a347405d6"
+  integrity sha1-0nT4crYm2ofWwO7EAJSqWjR0BdY=
+  dependencies:
+    iterare "1.2.1"
+    json-socket "0.3.0"
+    tslib "2.3.1"
+
 "@nestjs/mongoose@^8.0.1":
   version "8.0.1"
   resolved "https://registry.nlark.com/@nestjs/mongoose/download/@nestjs/mongoose-8.0.1.tgz#95d640bc746fdba04103a1e57a1ee3e3787ff0f1"
@@ -3517,6 +3526,11 @@ json-schema-traverse@^1.0.0:
   resolved "https://registry.nlark.com/json-schema-traverse/download/json-schema-traverse-1.0.0.tgz#ae7bcb3656ab77a73ba5c49bf654f38e6b6860e2"
   integrity sha1-rnvLNlard6c7pcSb9lTzjmtoYOI=
 
+json-socket@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npm.taobao.org/json-socket/download/json-socket-0.3.0.tgz#f4b953c685bb8e8bd0b72438f5208d9a0799ae07"
+  integrity sha1-9LlTxoW7jovQtyQ49SCNmgeZrgc=
+
 json-stable-stringify-without-jsonify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.nlark.com/json-stable-stringify-without-jsonify/download/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
@@ -3549,6 +3563,11 @@ jsonfile@^6.0.1:
     universalify "^2.0.0"
   optionalDependencies:
     graceful-fs "^4.1.6"
+
+kafkajs@^1.15.0:
+  version "1.15.0"
+  resolved "https://registry.npmmirror.com/kafkajs/download/kafkajs-1.15.0.tgz#a5ada0d933edca2149177393562be6fb0875ec3a"
+  integrity sha1-pa2g2TPtyiFJF3OTVivm+wh17Do=
 
 kareem@2.3.2:
   version "2.3.2"
@@ -5014,6 +5033,11 @@ tslib@2.3.0:
   version "2.3.0"
   resolved "https://registry.nlark.com/tslib/download/tslib-2.3.0.tgz?cache=0&sync_timestamp=1628722556410&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
   integrity sha1-gDuM2rPhK6WBpMpByIObuw2ssJ4=
+
+tslib@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.3.1.tgz?cache=0&sync_timestamp=1628722556410&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=
 
 tslib@^1.8.1, tslib@^1.9.0:
   version "1.14.1"

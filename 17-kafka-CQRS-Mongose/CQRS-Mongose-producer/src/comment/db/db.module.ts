@@ -11,13 +11,14 @@ const MONGO_MODULE = MongooseModule.forFeature([
   },
 ]);
 
+const url = process.env.MONGO_URL || 'localhost';
 @Global()
 @Module({
   // 连接mongo
   imports: [
     // 如果mongose有密码和账户
     // mongodb://账号:密码@localhost:27017/admin
-    MongooseModule.forRoot('mongodb://admin:123456@localhost:27017/admin'),
+    MongooseModule.forRoot(`mongodb://root:pass12345@${url}:27017/admin`),
     MONGO_MODULE,
   ],
   exports: [MONGO_MODULE],

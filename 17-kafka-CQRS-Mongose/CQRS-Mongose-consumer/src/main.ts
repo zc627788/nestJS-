@@ -8,13 +8,13 @@ async function bootstrap() {
     transport: Transport.KAFKA,
     options: {
       client: {
-        brokers: ['localhost:9092'],
+        brokers: ['10.240.131.10:9092'],
       },
       consumer: {
         grouoId: 'kafka',
       },
     },
-  })
+  });
 
   const options = new DocumentBuilder()
     .setTitle('comments example')
@@ -25,7 +25,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
 
-  await app.startAllMicroservices()
+  await app.startAllMicroservices();
   await app.listen(3001);
 }
 bootstrap();
